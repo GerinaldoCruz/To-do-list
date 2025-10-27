@@ -22,12 +22,12 @@ h1 {
    letter-spacing: 1px
 }
 
-.search {
+.form-search {
    position: relative;
    margin-bottom: 18px
 }
 
-.search input {
+.form-search input {
    width: 100%;
    padding: 12px 44px 12px 16px;
    border-radius: 10px;
@@ -47,7 +47,7 @@ h1 {
    margin-bottom: 18px
 }
 
-.todo-list {
+.todos-container {
    list-style: none;
    padding: 8px 6px;
    margin: 0;
@@ -79,13 +79,13 @@ h1 {
    color: var(--accent)
 }
 
-.label {
-   margin-top: 6px;
-   color: var(--muted);
-   font-size: 14px
+.subtitle {
+   font-weight: 400;
+   font-size: 16px;
+
 }
 
-.add-area {
+.form-add-task {
    display: flex;
    align-items: center;
    gap: 10px;
@@ -93,7 +93,7 @@ h1 {
    margin-top: 6px
 }
 
-.add-input {
+.add-task {
    flex: 1;
    padding: 12px 14px;
    border-radius: 10px;
@@ -101,19 +101,9 @@ h1 {
    font-size: 15px
 }
 
-.add-input:focus,
-#search:focus {
+.add-task:focus {
    outline: 1px solid var(--accent);
 }
-
-.button {
-   padding: 12px 18px;
-   border-radius: 10px;
-   border: 1px solid var(--accent);
-   color: var(--text);
-   cursor: pointer;
-}
-
 
 @media (max-width:420px) {
    h1 {

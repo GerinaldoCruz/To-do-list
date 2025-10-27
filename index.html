@@ -13,27 +13,22 @@
    <div class="wrap">
       <header>
          <h1>To-do List</h1>
-         <form class="search">
-            <input id="search" type="search" placeholder="Pesquisar to-do" aria-label="Pesquisar to-do" autocomplete="off">
+         <form class="form-search">
+            <input name="search" type="search" placeholder="Pesquisar to-do" aria-label="Pesquisar to-do" autocomplete="off">
          </form>
       </header>
 
       <main>
          <section class="card" aria-label="Lista de tarefas">
-            <ul class="todo-list">
-               <li class="todo-item">
-                  <p class="task">Assistir The waking dead</p>
-                  <img src="./images/icons/delete.svg" alt="delete" class="trash">
-               </li>
-            </ul>
+            <ul class="todos-container"></ul>
          </section>
       </main>
 
       <footer>
-         <p class="label">Adicionar to-do</p>
-         <form class="add-area">
-            <input id="newtask" class="add-input" placeholder="Nova tarefa..." aria-label="Nova tarefa" />
-            <button class="button">Adicionar tarefa</button>
+         <h3 class="subtitle">Adicionar to-do</h3>
+
+         <form class="form-add-task">
+            <input name="newtask" class="add-task" placeholder="Nova tarefa..." aria-label="Nova tarefa" autocomplete="off"/>
          </form>
       </footer>
    </div>
