@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>To-do List</title>
+   
+   <link rel="stylesheet" href="./css/reset.css">
+   <link rel="stylesheet" href="./css/variables.css">
+   <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+   <div class="wrap">
+      <header>
+         <h1>To-do List</h1>
+         <form class="search">
+            <input id="search" type="search" placeholder="Pesquisar to-do" aria-label="Pesquisar to-do" autocomplete="off">
+         </form>
+      </header>
+
+      <main>
+         <section class="card" aria-label="Lista de tarefas">
+            <ul class="todo-list">
+               <li class="todo-item">
+                  <p class="task">Assistir The waking dead</p>
+                  <img src="./images/icons/delete.svg" alt="delete" class="trash">
+               </li>
+            </ul>
+         </section>
+      </main>
+
+      <footer>
+         <p class="label">Adicionar to-do</p>
+         <form class="add-area">
+            <input id="newtask" class="add-input" placeholder="Nova tarefa..." aria-label="Nova tarefa" />
+            <button class="button">Adicionar tarefa</button>
+         </form>
+      </footer>
+   </div>
+
+   <script src="./app.js"></script>
+</body>
+</html>
