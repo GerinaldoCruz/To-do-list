@@ -29,7 +29,7 @@ h1 {
 
 .form-search input {
    width: 100%;
-   padding: 12px 44px 12px 16px;
+   padding: 12px;
    border-radius: 10px;
    border: none;
    outline: none;
@@ -59,7 +59,7 @@ h1 {
    align-items: center;
    justify-content: space-between;
    gap: 10px;
-   padding: 10px 6px;
+   padding: 10px;
 }
 
 .trash {
@@ -95,7 +95,7 @@ h1 {
 
 .add-task {
    flex: 1;
-   padding: 12px 14px;
+   padding: 12px;
    border-radius: 10px;
    border: 2px solid rgba(30, 136, 229, 0.15);
    font-size: 15px
@@ -107,6 +107,10 @@ h1 {
 
 .delete {
    cursor: pointer;
+}
+
+.hidden {
+   display: none;
 }
 
 @media (max-width:420px) {

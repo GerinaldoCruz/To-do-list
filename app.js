@@ -1,4 +1,5 @@
 const formAddTask = document.querySelector('.form-add-task')
+const inputSearchTodo = document.querySelector('.form-search')
 const todosContainer = document.querySelector('.todos-container')
 
 const creatTodo = taskName => {
@@ -31,5 +32,25 @@ const removeTodo = event => {
    }   
 }
 
+const isMach = value => /[a-z A-Z 0-9]/.test(value)
+
+
 formAddTask.addEventListener('submit', addTodo)
 todosContainer.addEventListener('click', removeTodo)
+
+inputSearchTodo.addEventListener('input', event => {
+   const inputValue = event.target.value.toLowerCase().trim()
+   const todos = [...todosContainer.children]
+
+   todos.forEach(todo => {
+      const lowerCaseTodo = todo.textContent.toLowerCase()
+      const includesSearchValue = lowerCaseTodo.trim().includes(inputValue)
+      const classListTodo = todo.classList
+      
+      !includesSearchValue 
+         ? classListTodo.add('hidden')
+         : classListTodo.remove('hidden')
+   })
+
+})
+
