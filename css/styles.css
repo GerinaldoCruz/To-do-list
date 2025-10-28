@@ -105,6 +105,10 @@ h1 {
    outline: 1px solid var(--accent);
 }
 
+.delete {
+   cursor: pointer;
+}
+
 @media (max-width:420px) {
    h1 {
       font-size: 34px
