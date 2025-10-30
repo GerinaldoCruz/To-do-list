@@ -9,34 +9,36 @@ const creatTodo = taskName => {
            </li>`
 }
 
-const addTodo = event => {
-   event.preventDefault()
-
-   const inputValue = event.target.newtask.value.trim()
-
+const addTodo = inputValue => {
    if (inputValue.length) {
       todosContainer.innerHTML += creatTodo(inputValue)
    }
-
-   event.target.reset()
 }
 
-const removeTodo = event => {
-   event.stopPropagation()
-
-   const clickedElement = event.target
+const removeTodo = clickedElement => {
    const isDelete = [...clickedElement.classList].includes('delete')
-
+   
    if (isDelete) {
       clickedElement.parentElement.remove()
    }   
 }
 
-const isMach = value => /[a-z A-Z 0-9]/.test(value)
+formAddTask.addEventListener('submit', event => {
+   event.preventDefault()
+   
+   const inputValue = event.target.newtask.value.trim()
+   addTodo(inputValue)
 
+   event.target.reset()
+})
 
-formAddTask.addEventListener('submit', addTodo)
-todosContainer.addEventListener('click', removeTodo)
+todosContainer.addEventListener('click', event => {
+   event.stopPropagation()
+
+   const clickedElement = event.target
+
+   removeTodo(clickedElement)
+})
 
 inputSearchTodo.addEventListener('input', event => {
    const inputValue = event.target.value.toLowerCase().trim()
@@ -51,6 +53,5 @@ inputSearchTodo.addEventListener('input', event => {
          ? classListTodo.add('hidden')
          : classListTodo.remove('hidden')
    })
-
 })
 
